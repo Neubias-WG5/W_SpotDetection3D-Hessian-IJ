@@ -1,0 +1,102 @@
+{
+    "name": "3DSpotDetection-Hessian-ImageJ",
+    "container-image": {
+        "image": "neubiaswg5/w_spotdetection3d-hessian-ij",
+        "type": "singularity"
+    },
+    "schema-version": "cytomine-0.1",
+    "description": "3D spot detection using the DoH and the detection of 3D minima.",
+    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE IJ_SCALE IJ_RADIUS_XY IJ_RADIUS_Z IJ_NOISE",
+    "inputs": [
+        {
+            "id": "cytomine_host",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine host",
+            "description": "Cytomine server hostname",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_public_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine public key",
+            "description": "Cytomine public key",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_private_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine private key",
+            "description": "Cytomine private key",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_project",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine project id",
+            "description": "Cytomine project id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_software",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine software id",
+            "description": "Cytomine software id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "ij_scale",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Radius",
+            "description": "Sigma for Gaussian smoothing",
+            "type": "Number",
+            "default-value": 1.7,
+            "optional": true
+        },
+        {
+            "id": "ij_radius_xy",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Threshold",
+            "description": "Radius in the xy-dimension for the 3D maximum finder",
+            "type": "Number",
+            "default-value": 3,
+            "optional": true
+        },
+	{
+            "id": "ij_radius_z",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Threshold",
+            "description": "Radius in the z-dimension for the 3D maximum finder",
+            "type": "Number",
+            "default-value": 6,
+            "optional": true
+        },
+	{
+            "id": "ij_noise",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Threshold",
+            "description": "Noise tolerance for the 3D maximum finder",
+            "type": "Number",
+            "default-value": 6300,
+            "optional": true
+        }
+    ]
+}
