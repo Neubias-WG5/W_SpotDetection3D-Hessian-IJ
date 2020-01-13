@@ -1,5 +1,5 @@
 {
-    "name": "3DSpotDetection-Hessian-ImageJ",
+    "name": "SpotDetection3D-Hessian-IJ",
     "container-image": {
         "image": "neubiaswg5/w_spotdetection3d-hessian-ij",
         "type": "singularity"
