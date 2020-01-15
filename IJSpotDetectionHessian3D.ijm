@@ -54,7 +54,7 @@ for(i=0; i<images.length; i++) {
 		clearSlices(startOfBottom, nSlices);
 		setSlice(1);
 		run("8-bit");
-
+		run("Invert LUT");
 		// Export results
 		save(outputDir + "/" + image);
 		
